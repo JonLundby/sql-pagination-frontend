@@ -1,0 +1,68 @@
+:root {
+  --background-color: rgb(132, 138, 156);
+  --table-background-color: rgba(92, 96, 108, 0.612);
+  --table-data-background-color: rgb(198, 201, 211);
+}
+
+body {
+    user-select: none;
+  background-color: var(--background-color);
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  text-align: center;
+}
+
+nav a {
+  padding: 6px;
+}
+
+.view-content {
+  display: none;
+}
+
+.view-content.active {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+th,
+td {
+  border: 0.5px solid black;
+}
+
+#tabs {
+  background-color: var(--table-background-color);
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 90vw;
+  padding: 12px;
+  border: 1px solid black;
+}
+
+th {
+    background-color: rgb(49, 57, 50);
+    color: rgb(199, 212, 212);
+} 
+#tabs table,
+tr {
+  background-color: var(--table-data-background-color);
+  border: none;
+  padding: 5px;
+  border-collapse: collapse;
+}
+
+#tabs h3:not(.selected) {
+  background-color: var(--table-background-color);
+  border-bottom: none;
+  cursor: pointer;
+}
+
+#tabs h3.selected {
+  background-color: var(--table-background-color);
+  border: 3px inset lightgrey;
+  cursor:pointer
+}
