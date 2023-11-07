@@ -7,4 +7,11 @@ async function getNames() {
   return data;
 }
 
-export { getNames };
+async function getSomeNames(page, pageSize) {
+  const response = await fetch(`${endpoint}/names?page=${page}&pageSize=${pageSize}`);
+  const data = await response.json();
+
+  return data;
+}
+
+export { getNames, getSomeNames };

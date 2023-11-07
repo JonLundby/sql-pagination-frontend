@@ -37,22 +37,28 @@ td {
 #tabs {
   background-color: var(--table-background-color);
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto;
+  justify-content: center;
   width: 90vw;
   padding: 12px;
+  gap: 12px;
   border: 1px solid black;
 }
 
 th {
     background-color: rgb(49, 57, 50);
     color: rgb(199, 212, 212);
+    cursor: pointer;
 } 
+
+
 #tabs table,
 tr {
   background-color: var(--table-data-background-color);
   border: none;
   padding: 5px;
   border-collapse: collapse;
+  width: 500px;
 }
 
 #tabs h3:not(.selected) {
