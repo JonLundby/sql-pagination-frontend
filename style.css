@@ -36,8 +36,10 @@ td {
 
 #tabs {
   background-color: var(--table-background-color);
-  display: grid;
-  grid-template-columns: auto;
+  display: flex;
+  flex-direction: column;
+  /* grid-template-columns: auto; */
+  align-items: center;
   justify-content: center;
   width: 90vw;
   padding: 12px;
@@ -51,15 +53,22 @@ th {
     cursor: pointer;
 } 
 
-
-#tabs table,
-tr {
+#names {
   background-color: var(--table-data-background-color);
   border: none;
   padding: 5px;
   border-collapse: collapse;
   width: 500px;
 }
+
+/* #tabs table,
+tr {
+  background-color: var(--table-data-background-color);
+  border: none;
+  padding: 5px;
+  border-collapse: collapse;
+  width: 500px;
+} */
 
 #tabs h3:not(.selected) {
   background-color: var(--table-background-color);
